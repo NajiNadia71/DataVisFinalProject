@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="MultiSelect.js"></script>
+
+</head>
+<body >
+
+    <div class="container">
+        <div class="row">
+            <div id="FilterDiv">
+                <h1>Filter Area </h1>
+                <div class="row"> 
+                <select style="width:30%;" id="region_Select" onchange="DropDownChangeRegion('region_Select')"><option  selected="selected"> Region</option> </select>
+                <select style="width:30%;" id="incomegroup_Select" onchange="DropDownChangeIncome('incomegroup_Select')"><option  selected="selected">incomegroup</option></select>
+                <select style="width:30%;" id="country_Select" onchange="DropDownChangeCountry('country_Select')"><option  selected="selected"> country</option></select>
+                 </div>
+                 <div class="row"> 
+                <input type="submit" onclick="WaffleChartLastYear()"  value="Show Me The Waffle Results">
+                <input type="submit" onclick="Waffle_Chart_For_All_Income_Groups()"  value="Show Me The Y Results">
+                <input type="submit" onclick="Waffle_Chart_For_All_Income_Groups()"  value="Show Me The Z Results">
+                <input type="submit" onclick="Waffle_Chart_For_All_Income_Groups()"  value="Show Me All the  Results">
+        </div>
+            </div>
+        </div>
+        <div class="row" id="AreaForWaffleCharts"></div>
+        <div class="row" id="AreaForStackedBar100"></div>
+        <div class="row" id="AreaForHistogram"></div>
+    </div>
+ 
+    <div  Id="Show_Charts">
+
+         </div>
+         <!-- <input type="submit" onclick="Waffle_Chart_For_All_Income_Groups()"  value="Show Me The Results"> -->
+        <!-- </form> -->
+
+</body>
+<script>
+    
+ var FilteredRegion="",FilteredIncomeLevel="",FilteredCountry="", UniversityDetail=[];
+ d3.csv("/data/AttendanceCSV.csv", function(data) {
+
+
+  var DistinctCountry=[];
+  var DistinctRegion=[];
+  var DistinctIncomeGroup=[];
+
+  for (var i = 0; i < data.length; i++) {
+         var regionI=data[i].region;
+         var countryI=data[i].country;
+         var incomegroupI=data[i].incomegroup;
+        const Obj = {regionName:regionI, countryName:countryI, incomeGroup:incomegroupI};
+
+        var existed=UniversityDetail.filter(x => x.regionName === regionI &&
+        x.countryName===countryI && x.incomeGroup===incomegroupI
+        );
+        if(existed.length==0)
+        {
+        UniversityDetail.push(Obj);
+        }
+        var ExistedRegion=DistinctRegion.filter(x=>x===regionI);
+        if(ExistedRegion.length==0)
+        {
+            DistinctRegion.push(regionI);
+        }
+        var ExistedCountry=DistinctCountry.filter(x=>x===countryI);
+        if(ExistedCountry.length==0)
+        {
+            DistinctCountry.push(countryI);
+        }
+        var ExistedIncomeGroup=DistinctIncomeGroup.filter(x=>x===incomegroupI);
+        if(ExistedIncomeGroup.length==0)
+        {
+            DistinctIncomeGroup.push(incomegroupI);
+        }
+
+    }
+    var x=DistinctCountry.length;
+    var qw=DistinctIncomeGroup.length;
+    var owpw=DistinctRegion.length;
+
+$.each(DistinctRegion, function(i, p) {
+    $('#region_Select').append($('<option></option>').val(p).html(p));
+});
+
+$.each(DistinctCountry, function(i, p) {
+    $('#country_Select').append($('<option></option>').val(p).html(p));
+});
+
+$.each(DistinctIncomeGroup, function(i, p) {
+    $('#incomegroup_Select').append($('<option></option>').val(p).html(p));
+});
+    });
+    function FinalDropDown()
+    {
+   var x=  UniversityDetail;
+        var NewCountries=[];
+   $('#country_Select').empty();
+  if(FilteredIncomeLevel!="" && FilteredRegion!="")
+  {
+   var ResponseCountries=UniversityDetail.filter(x=> x.regionName === FilteredRegion &&
+   x.incomeGroup===FilteredIncomeLevel).map(obj => obj.countryName);
+         if(ResponseCountries.length!=0)
+        {
+            $.each(ResponseCountries, function(i, p) {
+           $('#country_Select').append($('<option></option>').val(p).html(p));
+           });
+        }
+    }
+    if(FilteredRegion=="" && FilteredIncomeLevel!="")
+     {
+        var ResponseCountries=UniversityDetail.filter(x=> x.incomeGroup===FilteredIncomeLevel  ).map(obj => obj.countryName);
+         if(ResponseCountries.length!=0)
+        {
+            $.each(ResponseCountries, function(i, p) {
+           $('#country_Select').append($('<option></option>').val(p).html(p));
+        });
+        }
+     }
+     if(FilteredRegion!="" && FilteredIncomeLevel=="")
+     {
+        var ResponseCountries=UniversityDetail.filter(x=> x.regionName === FilteredRegion).map(obj => obj.countryName);
+         if(ResponseCountries.length!=0)
+        {
+            $.each(ResponseCountries, function(i, p) {
+           $('#country_Select').append($('<option></option>').val(p).html(p));
+        });
+        }
+     }
+
+    }
+function DropDownChangeIncome(ev)
+{
+    var e = document.getElementById(ev);
+    var SelectedInc = e.options[e.selectedIndex].text;
+    FilteredIncomeLevel=null;
+    FilteredIncomeLevel=SelectedInc;
+    FinalDropDown();
+
+}
+function DropDownChangeRegion(ev)
+{
+   
+   var e = document.getElementById(ev);
+    var SelectedReg = e.options[e.selectedIndex].text;
+    FilteredRegion="";
+    FilteredRegion=SelectedReg;
+    FinalDropDown();
+
+ }
+ function DropDownChangeCountry(ev)
+ {
+   
+    var e = document.getElementById(ev);
+    var SelectedContr = e.options[e.selectedIndex].text;
+    FilteredCountry="";
+    FilteredCountry=SelectedContr;
+   
+ }
+ 
+</script>
+</html>

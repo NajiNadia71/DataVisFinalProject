@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Css/Total_Css.css">
+     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script> 
+    <script src="/js/Total_Java_Script.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.js"></script>
+    
+  </head>
+
+<body>
+    <div class="container" id="part1" style="padding-top:2%;">
+    <div class="row">
+      <div  class="col-sm-3 General_And_Members" style=" background-color:#ccffcc;" >
+       <div class="col-sm-12">
+        <div class="row"  style="padding-top:7%;">
+            <h5>University Enrollments in The World</h5>
+            <h6>2022-2023 academic year</h6>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+          <div class="row ">
+            <h5>Group Members<h5>
+            </div>
+            <div class="row ">
+              <h6>Nadia Naji</h6>
+              </div>
+            </div>
+        </div>
+      </div>
+        </div>
+     
+      <div class="col-sm-9"  style=" background-color:#b3ffb3; padding:0.5% ;"> 
+        <div style="padding:0.5% ">
+          <p>
+          <div style="font-family: 'Fira Sans'; color: #26734d;"> Subject Of This Website   </div> 
+   <div style="font-family: 'Fira Sans';">This is a project for visualizing different part of a WorldWide dastaset about University Entollments
+    . I try to cover most important information from this dataset.
+  </div> </p>
+    <p>
+    <div style="font-family: 'Fira Sans'; color: #26734d;"> Dataset Detail </div> 
+    This dataset provides details about Universities and also Students as well as some basic data about the countries. 
+   I try to use this features to determined different chart for this project such as Map,Bubble chart,Histogram ,MultiLine Graph and StackedBar 100 Percent.</p>
+    <p>
+    <div style="font-family: 'Fira Sans'; color: #26734d;">Instructions   </div> 
+    Choose Type Of Graph from below ,there will be some details about the graph and subjects that are used to plot the graph.In some case Multiples 
+    Graph are availabel.
+  </p>
+  </div>
+     </div>
+     
+    </div>
+</div>
+<div id="Part2" style="padding-top:2% ;" >
+  
+ <div class="tab">
+    <button class="tablinks" onclick="openAssignment(event, 'Bubble_Chart')">Bubble Graph </button>
+    <button class="tablinks" onclick="openAssignment(event, 'Map')">Map </button>
+    <button class="tablinks" onclick="openAssignment(event, 'Histogram')">Histogram </button>
+    <button class="tablinks" onclick="openAssignment(event, 'MultiLing_Graph')">MultiLine Graph </button>
+    <button class="tablinks" onclick="openAssignment(event, 'Stacked_Bar')">Stacked Bar</button>
+  </div> 
+  
+  <!-- Tab content -->
+  <div id="Bubble_Chart" class="tabcontent">
+    <p>
+        Bubble Chart:I Use This graph to show the Ratio of count of course that had been offer to different study levels of universities I try
+         to show this issue based on different Income Level.I use 5 universities with highest quantity of students.
+      <ul>
+        <li><a href="/BubbleChart.html" target="_blank">Bubble Graph</a> </li>
+        <li><a href="/OtherBubbleChart.html" target="_blank">The Other Bubble Graph</a> </li>
+        
+  </ul>
+    </p>
+</div>
+
+  
+  <div id="Map" class="tabcontent">
+    <p>
+        Map : In this Map I try to get an overview about the whole world.Ifyou cick on any country ,some details about the universities in the country will be shown .also I try to use different color fir each country to show the income level at first glance
+        .
+      <ul>
+        <li><a href="/FinalWorldMap.html" target="_blank">Map</a> </li>
+
+       
+  </ul>
+    </p></div>
+  
+  <div id="Histogram" class="tabcontent">
+    <p>
+        Histogram : I plot 2 different Histogram to show the quantity of universities in countries based on income and region.
+        there is a button to compare these information in income group based graph .
+      <ul>
+        <li><a href="/HistoGram_University_Founded_Year_Income.html" target="_blank">Histogram based on Income Group </a> </li>
+        <li><a href="/Histogram_University_Founded_Year.html" target="_blank">Histogram based on Region  </a> </li>
+       
+  </ul>
+    </p>
+  </div>
+  <div id="MultiLing_Graph" class="tabcontent">
+
+    <p>
+        MultiLing Graph : In this page a MultiLine Graph has been show about 3 oldest universities in each region with different shades.
+        I try to follow the quantity of students in these universities from 1950 to 2020 .
+        by click on region only universities in the region will be shown.
+        if you like to see only one University click on that one.
+        double click on div show all the data at once.
+      <ul>
+        <li><a href="/MultiLineGraph.html" target="_blank">MultiLine Graph</a> </li>
+     
+  </ul>
+    </p>
+
+  </div>
+  <div id="Stacked_Bar" class="tabcontent">
+    <p>
+        Stacked Bar :dataset has different fields for each universities such as Active, Not Active,Special ,Not special and public or private.
+        In these stacked bar I try to show these detail as a ratio toward all the universities based on income level or region .
+        by click on every stacked bar all the details will be shown as a toolip.
+      <ul>
+        <li><a href="/Stacked_100_Percent_IncomeLevel.html" target="_blank">Stacked Bar based on IncomeLevel </a> </li>
+        <li><a href="/Stacked_100_Percent_Region.html" target="_blank">Stacked Bar based on Region  </a> </li>
+       
+  </ul>
+    </p>
+  </div>
+</div> 
+
+</body>
+</html>
+

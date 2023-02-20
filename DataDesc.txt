@@ -1,0 +1,14 @@
+For Waffle Chart 
+select * from  LastYearAllUniversitiesAllData where students5_estimated!='' and region!='' and phd_granting!='' and m_granting!='' and b_granting!=''
+All Universities in Last Year which is 2020 
+where have the essential Data as abow 
+-------------------------------------------------------------
+  Universities StudyLevel Type            Code     ColorCode
+  ----------------------------            -----    ----------
+1. Only PHD                                 7        #0e23f0 
+2. Only Masters                             6        #27690a
+3. Only Bachelor                            5        #f00e18
+4. Phd And Masters                          4        #18c1ca
+5. Masters and Bachelor                     3        #0fce0c 
+6. Phd and Bachelor                         2        #f58d8d
+7. All Of them                              1        #9026be

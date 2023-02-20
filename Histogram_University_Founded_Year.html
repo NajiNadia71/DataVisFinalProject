@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<style>
+  .container{
+   padding-right: 0% !important;
+   padding-left: 0% !important;
+   margin-right: 0% !important;
+   margin-left: 0% !important;
+  }
+ .Hidden{
+  visibility: hidden;
+  }
+  .Show{
+  visibility: visible;
+  }
+  .BarDisable{
+   opacity: 0!important;
+   /* z-index: -10; */
+  }
+  /* .wrapper{
+  position: relative;
+}
+
+.Region, .IncomeLevel{
+  position: absolute;
+} */
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="/Css/HistogramColorCode.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body >
+  <div class="container"> 
+
+    <!-- <div class="row" style="padding-top: 8px;padding-left: 100px;"> 
+        <div class="btn-group" role="group" aria-label="Choose Subject Of Histogram">
+            <button type="button" onclick="IncomeLevelChoosed()"  class="btn btn-primary">IncomeLevel</button>
+            <button type="button" onclick="RegionChoosed()" class="btn btn-primary">Region</button>
+           
+          </div>
+
+    </div> -->
+   
+    
+<div class="row">
+        <div Id="Region"  class="col-8"   style="padding-left: 0px!important;" >
+          </div>
+
+          <div id="ExplainsRegionId" class="col-4"  style="padding-left: 10%; padding-top: 4%;">
+            <div class="row" style="font-weight: bold;">Details about The Histogram </div>
+            <div class="row" onclick="ShowNorthAmerica()">-North America  &nbsp; <div class="North_America"></div></div>
+            <div class="row" onclick="ShowLatinAmericaAndCaribbean()">-Latin America and Caribbean  &nbsp;  <div class="Latin_America_and_Caribbean"></div></div>
+            <div class="row"  onclick="ShowEastAsiaAndPacific()" >-East Asia and Pacific  &nbsp;  <div class="East_Asia_and_Pacific"></div></div>
+            <div class="row" onclick="ShowEuropeAndCentralAsia ()" >-Europe and Central Asia &nbsp; <div class="Europe_and_Central_Asia"></div>  </div>
+            <div class="row" onclick="ShowMiddleEastAndNorthAfrica()" >-Middle East and North Africa&nbsp; <div class="Middle_East_and_North_Africa"></div></div>
+            <div class="row" onclick="ShowSouthAsia()" >-South Asia&nbsp; &nbsp;&nbsp;  <div class="South_Asia"></div>  </div>
+            <div class="row" onclick="ShowSub_SaharanAfrica()">-Sub-Saharan Africa &nbsp;  &nbsp;&nbsp; <div class="Sub-Saharan_Africa"></div> </div>
+         
+           
+          
+         </div>
+     
+        </div>
+ </div>
+      <!-- <div Id="IncomeLevel"  class="col-8"   style="padding-left: 0px!important;"  class="Hidden"></div>
+      <div id="ExplainsIncomeLevelId" class="col-4  Hidden"  style="padding-left: 10%; padding-top: 7%;">
+        <div class="row" style="font-weight: bold;">Details about The Histogram</div>
+        <div class="row" onclick="ShowLowIncome()">-Low Income  &nbsp;  <div class="Low_Income"></div></div>
+        <div class="row" onclick="ShowLowerMiddleIncome()">-Lower Middle Income  &nbsp; <div class="Lower_Middle_Income"></div></div>
+        <div class="row"  onclick="ShowUpperMiddleIncome()" >-Upper Middle Income  &nbsp;  <div class="Upper_Middle_Income"></div></div>
+        <div class="row" onclick="ShowHighIncome()" >-High Income &nbsp; <div class="High_Income"></div>  </div>
+     
+      </div> 
+    
+    </div>-->
+    
+ 
+    
+  </body>
+  <script>
+    ///////////////////// Region Part /////////////////////////////////////////////////////////
+  
+      debugger;
+      // document.getElementById('Region').innerHTML = "";
+
+      //   var  RegionEl=document.getElementById('Region');
+      //   RegionEl.classList.remove('Hidden');
+      //  RegionEl.classList.add('Show');
+      //   var  ExplainEl=document.getElementById('ExplainsRegionId');
+      //  ExplainEl.classList.remove('Hidden');
+      //  ExplainEl.classList.add('Show');
+      //  var  IncomeLevelEl=document.getElementById('IncomeLevel');
+      //  IncomeLevelEl.classList.add('Hidden');
+      //  IncomeLevelEl.classList.remove('Show');
+       
+            // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins1 = histogram(data.filter( function(d){return d.region === "North America"} ));
+  var bins2 = histogram(data.filter( function(d){return d.region === "Latin America and Caribbean"} ));
+  var bins3 = histogram(data.filter( function(d){return d.region === "East Asia and Pacific"} ));
+  var bins4 = histogram(data.filter( function(d){return d.region === "Europe and Central Asia"} ));
+  var bins5 = histogram(data.filter( function(d){return d.region === "Middle East and North Africa"} ));
+  var bins6 = histogram(data.filter( function(d){return d.region === "South Asia"} ));
+  var bins7 = histogram(data.filter( function(d){return d.region === "Sub-Saharan Africa"} ));
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+  svg.selectAll("rect1")
+      .data(bins1)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+       .style("fill", "#7624AC")
+        .attr("class","North_America_C")
+        .attr("id","North_America_C")
+     .on("click", onGraphClick )
+        .style("opacity", 0.6)    
+
+
+  // // append the bars for series 2
+  svg.selectAll("rect2")
+      .data(bins2)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#FF5E03")
+        .attr("id","Latin_America_And_Caribbean_C")
+        .attr("class","Latin_America_And_Caribbean_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+          // // append the bars for series 1
+  svg.selectAll("rect3")
+      .data(bins3)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#E01429")
+        .attr("id","East_Asia_and_Pacific_C")
+        .attr("class","East_Asia_and_Pacific_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+      
+  // append the bars for series 2
+  svg.selectAll("rect4")
+      .data(bins4)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#6467F1")
+        .attr("class","Europe_and_Central_Asia_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+  // append the bars for series 1
+  svg.selectAll("rect5")
+      .data(bins5)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#6AF688")
+        .attr("class","Middle_East_and_North_Africa_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+  // append the bars for series 2
+  svg.selectAll("rect6")
+      .data(bins6)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#FFF300")
+        .attr("class","South_Asia_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+          // append the bars for series 2
+  svg.selectAll("rect7")
+      .data(bins7)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#F061C2")
+        .attr("class","Sub_Saharan_Africa_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+  
+});
+
+  
+    function ShowNorthAmerica()
+    {
+      debugger;
+      d3.selectAll('svg').remove();
+
+         // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins1 = histogram(data.filter( function(d){return d.region === "North America"} ));
+  
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+      svg.selectAll("rect1")
+      .data(bins1)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+       .style("fill", "#7624AC")
+        .attr("class","North_America_C")
+        .attr("id","North_America_C")
+     .on("click", onGraphClick )
+        .style("opacity", 0.6) 
+
+
+
+});
+
+    }
+    function ShowLatinAmericaAndCaribbean()
+    {
+      debugger;
+      d3.selectAll('svg').remove();
+
+         // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins2 = histogram(data.filter( function(d){return d.region === "Latin America and Caribbean"} ));
+  
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+
+  // // append the bars for series 2
+  svg.selectAll("rect2")
+      .data(bins2)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#FF5E03")
+        .attr("id","Latin_America_And_Caribbean_C")
+        .attr("class","Latin_America_And_Caribbean_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+
+
+ } );
+    }
+    function ShowEastAsiaAndPacific()
+    {
+      debugger;
+      d3.selectAll('svg').remove();
+
+         // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins3 = histogram(data.filter( function(d){return d.region === "East Asia and Pacific"} ));
+  
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+       // // append the bars for series 1
+       svg.selectAll("rect3")
+      .data(bins3)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#E01429")
+        .attr("id","East_Asia_and_Pacific_C")
+        .attr("class","East_Asia_and_Pacific_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+
+
+ } );
+    }
+    function ShowEuropeAndCentralAsia ()
+    {
+      debugger;
+      d3.selectAll('svg').remove();
+
+         // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins4 = histogram(data.filter( function(d){return d.region === "Europe and Central Asia"} ));
+  
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+       // // append the bars for series 1
+       svg.selectAll("rect4")
+      .data(bins4)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#6467F1")
+        .attr("class","Europe_and_Central_Asia_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+
+
+
+ } )
+    }
+    function ShowMiddleEastAndNorthAfrica()
+    {
+      debugger;
+      d3.selectAll('svg').remove();
+
+         // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins5 = histogram(data.filter( function(d){return d.region === "Middle East and North Africa"} ));
+  
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+       // append the bars for series 1
+  svg.selectAll("rect5")
+      .data(bins5)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#6AF688")
+        .attr("class","Middle_East_and_North_Africa_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+
+
+
+ } )
+    }
+    function ShowSouthAsia()
+    {
+      debugger;
+      d3.selectAll('svg').remove();
+
+         // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins6 = histogram(data.filter( function(d){return d.region === "South Asia"} ));
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+  // append the bars for series 2
+  svg.selectAll("rect6")
+      .data(bins6)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#FFF300")
+        .attr("class","South_Asia_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+
+
+
+ } )
+    }
+    function ShowSub_SaharanAfrica()
+    {
+      debugger;
+      d3.selectAll('svg').remove();
+
+         // set the dimensions and margins of the graph
+var margin = {top: 20, right: 30, bottom: 30, left: 50},
+    width = 900 - margin.left - margin.right,
+    height = 580 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#Region")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+
+  // X axis: scale and draw:
+  var x = d3.scaleLinear()
+      .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+      .range([0, width]);
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // set the parameters for the histogram
+  var histogram = d3.histogram()
+      .value(function(d) { return +d.foundedyr; })   // I need to give the vector of value
+      .domain(x.domain())  // then the domain of the graphic
+      .thresholds(x.ticks(40)); // then the numbers of bins
+
+  // And apply twice this function to data to get the bins.
+  var bins7 = histogram(data.filter( function(d){return d.region === "Sub-Saharan Africa"} ));
+  // Y axis: scale and draw:
+  var y = d3.scaleLinear()
+      .range([height, 0]);
+      y.domain([0,300]);  
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+            // append the bars for series 2
+            svg.selectAll("rect7")
+      .data(bins7)
+      .enter()
+      .append("rect")
+        .attr("x", 1)
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .style("fill", "#F061C2")
+        .attr("class","Sub_Saharan_Africa_C")
+        .on("click", onGraphClick )
+        .style("opacity", 0.6)
+
+
+
+
+ } )
+    }
+    function GetClassName(RegionName)
+     {
+      
+       if(RegionName=='North America')
+       {
+        return ['North_America_C',-1];
+       }
+       if(RegionName=='Europe and Central Asia')
+       {
+        return ['Europe_and_Central_Asia_C',-2];
+       }
+       
+       if(RegionName=='Latin America and Caribbean')
+       {
+       return ['Latin_America_And_Caribbean_C',-3];
+       }
+       
+       if(RegionName=='East Asia and Pacific')
+       {
+        return ['East_Asia_and_Pacific_C',-4];
+       }
+       if(RegionName=='Middle East and North Africa')
+       {
+    return ['Middle_East_and_North_Africa_C',-5];
+       }
+       
+       if(RegionName=='South Asia')
+       {
+        return ['South_Asia_C',-6];
+       }
+       
+       if(RegionName=='Sub-Saharan Africa')
+       {
+return ['Sub_Saharan_Africa_C',-7];
+       }
+     }
+    function onGraphClick(d)
+    {
+      debugger;
+      var Region=d[1].region;
+      alert(Region);
+      var ClassNameOfSelected= GetClassName(Region);
+      var ClassName=ClassNameOfSelected[0];
+      var Z_IndexFor=ClassNameOfSelected[1];
+      Array.from(document.getElementsByClassName(ClassName)).forEach(
+    function(element, index, array) {
+    
+        var AllArray=array;
+       for  ( var It in AllArray )
+       {
+        debugger;
+        var x=AllArray[It];
+        $(x).remove();
+
+  d3.select(x).select("svg").remove();
+  d3.select(x).remove();
+
+      ///  x.classList.add('BarDisable') ;
+       
+       }
+    }
+);
+ 
+    }
+   
+
+ </script>
