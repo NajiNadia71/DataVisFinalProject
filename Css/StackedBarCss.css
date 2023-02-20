@@ -1,0 +1,40 @@
+.Active_Private_Specialized  {
+    height: 15px;
+    width: 15px;
+    background-color: #FFF300;
+  }
+  .Active_Private_NotSpecialized {
+    height: 15px;
+    width: 15px;
+    background-color: #A70D17;
+  }
+  .Active_Public_Specialized {
+    height: 15px;
+    width: 15px;
+    background-color: #FF5E03;
+  }
+  .Active_Public_NotSpecialized {
+    height: 15px;
+    width: 15px;
+    background-color: #FFFBAF;
+  }
+  .InActive_Private_NotSpecialized {
+    height: 15px;
+    width: 15px;
+    background-color: #7624AC;
+  }
+  .InActive_Private_Specialized {
+    height: 15px;
+    width: 15px;
+    background-color: #080A86;
+  }
+  .InActive_Public_NotSpecialized {
+    height: 15px;
+    width: 15px;
+    background-color: #02FA37;
+  }
+  .InActive_Public_Specialized {
+    height: 15px;
+    width: 15px;
+    background-color: #CD028C;
+  }

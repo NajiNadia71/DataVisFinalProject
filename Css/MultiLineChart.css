@@ -1,0 +1,106 @@
+.LatinAmericaLight {
+    height: 15px;
+    width: 15px;
+    background-color: #FF5E03;
+  }
+  .LatinAmericaHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #F5892A;
+  }
+  .LatinAmericaMed {
+    height: 15px;
+    width: 15px;
+    background-color: #F7A77A;
+  }
+  .SouthAsiaLight {
+    height: 15px;
+    width: 15px;
+    background-color: #FFFBAF;
+  }
+  .SouthAsiaHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #FFF300;
+  }
+  .SouthAsiaMed {
+    height: 15px;
+    width: 15px;
+    background-color: #FFF642;
+  }
+  .MiddleEastLight {
+    height: 15px;
+    width: 15px;
+    background-color: #6AF688;
+  }
+  .MiddleEastHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #056319;
+  }
+  .MiddleEastMid {
+    height: 15px;
+    width: 15px;
+    background-color: #02FA37;
+  }
+  .EuropeMed {
+    height: 15px;
+    width: 15px;
+    background-color: #6467F1;
+  }
+  .EuropeLight {
+    height: 15px;
+    width: 15px;
+    background-color: #D1D2FF;
+  }
+  .EuropeHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #080A86;
+  }
+  .NorthAmericaMed {
+    height: 15px;
+    width: 15px;
+    background-color: #B86BED;
+  }
+  .NorthAmericaLight {
+    height: 15px;
+    width: 15px;
+    background-color: #DEC4F0;
+  }
+  .NorthAmericaHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #7624AC;
+  }
+  .EastAsiaHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #A70D17;
+  }
+  .EastAsiaLight {
+    height: 15px;
+    width: 15px;
+    background-color: #F28D93;
+  }
+  .EastAsiaMed {
+    height: 15px;
+    width: 15px;
+    background-color: #E01429;
+  }
+
+  .SaharanAfricaLight {
+    height: 15px;
+    width: 15px;
+    background-color: #F79DDA;
+  }
+  .SaharanAfricaHigh {
+    height: 15px;
+    width: 15px;
+    background-color: #CD028C;
+  }
+  .SaharanAfricaMed {
+    height: 15px;
+    width: 15px;
+    background-color: #F061C2;
+  }
