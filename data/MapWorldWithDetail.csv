@@ -1,0 +1,247 @@
+name,code,popId,Column1,IncomeLevel,ColorCode,CountUniversity,FirstUniversityName,FoundedFirstUniversity,CountUniversityWithB,CountUniversityWithM,CountUniversityWithPHD,CountOfPublic,TotalStudent,CountOfPrivate
+Antigua and Barbuda,ATG,83039,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Algeria,DZA,32854159,,Lower middle income,#FFF300,97,Benyoucef Benkhedda University Of Algiers 1,1859,64,76,62,97,1298952,NULL
+Azerbaijan,AZE,8352021,,Upper middle income,#6AF688,47,Azerbaijan State Marine Academy,1881,44,42,30,35,257144,12
+Albania,ALB,3153731,,Upper middle income,#6AF688,28,Alexander Xhuvani University Elbasan,1909,27,26,11,11,164905,17
+Armenia,ARM,3017661,,Upper middle income,#6AF688,59,Yerevan State University,1919,52,49,24,35,159712,24
+Angola,AGO,16095214,,Lower middle income,#FFF300,46,University Agostinho Neto (University Studies Of Angola),1962,44,NULL,1,20,263821,26
+American Samoa,ASM,64051,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Argentina,ARG,38747148,,Upper middle income,#6AF688,115,National University Of C�?��?�Rdoba,1613,106,NULL,70,54,1954351,61
+Australia,AUS,20310208,,High income,#6467F1,85,The University Of Sydney,1850,68,69,46,47,1712444,38
+Bahrain,BHR,724788,,High income,#6467F1,15,Gulf Technical College,1968,12,10,2,4,60117,11
+Barbados,BRB,291933,,High income,#6467F1,1,University Of The West Indies - Cave Hill Campus,1962,1,1,1,1,7135,NULL
+Bermuda,BMU,64174,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Bahamas,BHS,323295,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Bangladesh,BGD,15328112,,Lower middle income,#FFF300,121,Bangladesh University Of Engineering And Technology,1846,119,116,28,38,1676604,83
+Belize,BLZ,275546,,Upper middle income,#6AF688,5,University Of The West Indies Extramural Department (School Of Continuing Studies),1949,2,2,NULL,4,3074,1
+Bosnia and Herzegovina,BIH,3915238,,Upper middle income,#6AF688,39,University Of Sarajevo,1949,39,26,22,10,145525,29
+Bolivia,BOL,9182015,,Lower middle income,#FFF300,52,"Royal, Pontifical University San Francisco Xavier De Chuquisaca",1624,47,NULL,13,15,709710,37
+Burma,MMR,47967266,,Lower middle income,#FFF300,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Benin,BEN,8490301,,Lower middle income,#FFF300,32,Abomey-Calavi University,1970,28,30,4,2,256036,30
+Solomon Islands,SLB,472419,,Lower middle income,#FFF300,2,"University Of The South Pacific, Solomon Islands Campus",1970,2,1,1,2,390,NULL
+Brazil,BRA,186830759,,Upper middle income,#6AF688,922,Federal University Of Bahia,1575,748,NULL,130,196,9156910,726
+Bulgaria,BGR,7744591,,Upper middle income,#6AF688,62,Nikola Vaptsarov Naval Academy,1881,50,49,45,49,294619,13
+Brunei Darussalam,BRN,373831,,High income,#6467F1,4,University Of Brunei Darussalam,1985,4,4,4,4,7830,NULL
+Canada,CAN,32270507,,High income,#6467F1,156,Laval University,1663,125,92,67,122,2453714,34
+Cambodia,KHM,13955507,,Lower middle income,#FFF300,45,Royal University Of Agriculture,1850,42,39,18,23,270863,22
+Sri Lanka,LKA,19120763,,Lower middle income,#FFF300,27,University Of Kelaniya,1875,24,23,17,23,203907,4
+Congo,COG,3609851,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Democratic Republic of the Congo,COD,58740547,,Low income,#E01429,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Burundi,BDI,7858791,,Low income,#E01429,6,University Of Burundi,1960,NULL,NULL,3,1,21779,5
+China,CHN,1312978855,,Upper middle income,#6AF688,1044,Hunan University,976,886,489,298,792,20437606,252
+Afghanistan,AFG,25067407,,Low income,#E01429,45,Shaheed Rabbani Education University,1913,45,17,6,31,185436,14
+Bhutan,BTN,637013,,Lower middle income,#FFF300,3,Royal Institute Of Management,1986,2,2,2,2,20278,1
+Chile,CHL,16295102,,High income,#6467F1,71,University Of Chile,1738,43,42,35,18,875079,53
+Cayman Islands,CYM,45591,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Cameroon,CMR,17795149,,Lower middle income,#FFF300,42,National School Of Administration And Magistracy,1959,35,36,15,16,230834,26
+Chad,TCD,10145609,,Low income,#E01429,10,National School Of Administration And Magistracy,1963,8,6,1,9,21092,1
+Comoros,COM,797902,,Lower middle income,#FFF300,1,University Of The Comoros,2003,1,NULL,NULL,1,227,NULL
+Colombia,COL,4494579,,Upper middle income,#6AF688,244,Saint Tom�?��?�S University,1580,NULL,NULL,75,76,2454274,168
+Costa Rica,CRI,4327228,,Upper middle income,#6AF688,54,University Of Costa Rica,1843,22,NULL,20,5,234844,49
+Central African Republic,CAF,4191429,,Low income,#E01429,4,National School For Administration And Magistracy,1962,1,2,2,4,18261,NULL
+Cuba,CUB,11259905,,Upper middle income,#6AF688,54,University Of Medical Sciences Of Havana,1728,34,NULL,26,54,263715,NULL
+Cape Verde,CPV,506807,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Cook Islands,COK,13984,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Cyprus,CYP,836321,,High income,#6467F1,32,Casa College,1961,30,20,NULL,4,66373,28
+Denmark,DNK,5416945,,High income,#6467F1,47,University Of Copenhagen,1479,29,20,19,47,146994,NULL
+Djibouti,DJI,804206,,Lower middle income,#FFF300,1,University Of Djibouti,2006,1,1,NULL,1,8226,NULL
+Dominica,DMA,67827,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Dominican Republic,DOM,9469601,,Upper middle income,#6AF688,37,Autonomous University Of Santo Domingo,1538,30,NULL,13,4,478197,33
+Ecuador,ECU,13060993,,Upper middle income,#6AF688,60,Central University Of Ecuador,1586,47,NULL,5,27,618591,33
+Egypt,EGY,72849793,,Lower middle income,#FFF300,55,Cairo University,1908,47,42,31,28,2636856,27
+Ireland,IRL,4143294,,High income,#6467F1,52,"Trinity College Dublin, The University Of Dublin",1592,44,42,24,35,1064292,17
+Equatorial Guinea,GNQ,484098,,Upper middle income,#6AF688,1,University Of Equatorial Guinea,1995,1,NULL,NULL,1,6852,NULL
+Estonia,EST,1344312,,High income,#6467F1,11,University Of Grab,1632,NULL,10,7,8,49661,3
+Eritrea,ERI,4526722,,Low income,#E01429,8,University Of Asmara,1958,7,4,NULL,8,4444,NULL
+El Salvador,SLV,6668356,,Lower middle income,#FFF300,30,University Of El Salvador,1841,NULL,NULL,11,3,155111,27
+Ethiopia,ETH,78985857,,Low income,#E01429,66,Ambo University,1939,66,38,14,32,979524,34
+Austria,AUT,8291979,,High income,#6467F1,64,Medical University Of Vienna,1365,59,60,32,31,401051,33
+Czech Republic,CZE,10191762,,High income,#6467F1,46,Charles University In Prague,1348,NULL,42,29,26,326237,20
+French Guiana,GUF,192099,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Finland,FIN,5246004,,High income,#6467F1,56,University Of Helsinki,1640,NULL,14,13,54,177248,2
+Fiji,FJI,828046,,Upper middle income,#6AF688,7,Fiji National University,1855,5,3,3,4,41340,3
+Falkland Islands (Malvinas),FLK,2975,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Micronesia, Federated States of,FSM,110058,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+French Polynesia,PYF,255632,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+France,FRA,60990544,,High income,#6467F1,434,Montpellier University,1180,172,223,175,299,2842356,135
+Gambia,GMB,1617029,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Gabon,GAB,1290693,,Upper middle income,#6AF688,17,National School Of Forestry And Water Management,1953,13,14,3,9,62271,8
+Georgia,GEO,4473409,,Upper middle income,#6AF688,49,V.Sarajishvili Tbilisi State Conservatoire,1917,45,44,28,21,137831,28
+Ghana,GHA,2253501,,Lower middle income,#FFF300,77,Christ Apostolic University College,1917,71,39,12,24,500315,53
+Grenada,GRD,105237,,Upper middle income,#6AF688,2,University Of The West Indies School Of Continuing Studies,1956,1,NULL,1,1,7677,1
+Greenland,GRL,57475,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Germany,DEU,82652369,,High income,#6467F1,390,University Of Erfurt,1372,340,346,150,269,2770372,121
+Guam,GUM,16857,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Greece,GRC,11099737,,High income,#6467F1,37,Ionian University,1824,25,23,19,36,442200,1
+Guatemala,GTM,12709564,,Upper middle income,#6AF688,38,University Of San Carlos Of Guatemala,1676,33,NULL,13,17,4209033,21
+Guinea,GIN,9002656,,Low income,#E01429,39,Higher Institute Of Mining And Geology Of Bok�?��?�,1962,35,16,5,15,216743,24
+Guyana,GUY,739472,,Upper middle income,#6AF688,4,University Of Guyana,1963,4,3,2,1,9630,3
+Haiti,HTI,9296291,,Low income,#E01429,17,Law School Of Cayes,1894,12,NULL,NULL,3,48839,14
+Honduras,HND,683411,,Lower middle income,#FFF300,18,National Autonomous University Of Honduras,1847,18,NULL,5,5,186603,13
+Croatia,HRV,455149,,High income,#6467F1,37,University Of Zagreb,1669,NULL,NULL,10,18,206970,19
+Hungary,HUN,10086387,,High income,#6467F1,58,University Of P�?��?�Cs,1367,NULL,35,23,46,234055,12
+Iceland,ISL,295732,,High income,#6467F1,10,H�?��?�L�?��?�R University College,1882,NULL,NULL,3,7,8696,3
+India,IND,1134403141,,Lower middle income,#FFF300,813,"Presidency University, Kolkata",1817,701,741,601,512,18960966,301
+Iran (Islamic Republic of),IRN,69420607,,Upper middle income,#6AF688,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Israel,ISR,6692037,,High income,#6467F1,60,"Bezalel Academy Of Arts And Design, Jerusalem",1906,56,58,9,45,387293,15
+Italy,ITA,5864636,,High income,#6467F1,104,University Of Parma,962,93,95,84,69,2015299,35
+Cote d'Ivoire,CIV,18584701,,Lower middle income,#FFF300,97,Pratical School Of The Chamber Of Commerce And Industry,1938,71,66,11,13,319726,84
+Iraq,IRQ,27995984,,Upper middle income,#6AF688,103,College Of Law,1908,84,35,28,61,935299,42
+Japan,JPN,127896740,,High income,#6467F1,809,Komazawa University,1592,620,533,429,197,3057177,612
+Jamaica,JAM,2682469,,Upper middle income,#6AF688,8,Mico University College,1836,5,5,3,3,52050,5
+Jordan,JOR,5544066,,Upper middle income,#6AF688,31,University Of Jordan,1962,31,26,10,10,328538,21
+Kenya,KEN,35598952,,Lower middle income,#FFF300,51,St Paul'S University,1903,50,44,40,27,749450,24
+Kyrgyzstan,KGZ,5203547,,Lower middle income,#FFF300,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Korea, Democratic People's Republic of,PRK,23615611,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Kiribati,KIR,92003,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Korea, Republic of,KOR,47869837,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Kuwait,KWT,2700,,High income,#6467F1,11,College Of Technological Studies,1954,10,5,1,5,107607,6
+Kazakhstan,KAZ,15210609,,Upper middle income,#6AF688,112,Kazakh National Pedagogical University Named After Abai,1928,108,101,66,56,649785,56
+Lao People's Democratic Republic,LAO,566391,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Lebanon,LBN,401074,,Upper middle income,#6AF688,41,American University Of Beirut,1866,37,33,18,1,250108,40
+Latvia,LVA,2301793,,High income,#6467F1,28,Riga Technical University,1862,NULL,NULL,19,19,91567,9
+Belarus,BLR,9795287,,Upper middle income,#6AF688,51,Belarusian State Agricultural Academy,1840,NULL,43,39,45,387291,6
+Lithuania,LTU,3425077,,High income,#6467F1,22,Vilnius University,1579,NULL,18,NULL,17,118748,5
+Liberia,LBR,3441796,,Low income,#E01429,6,University Of Liberia,1851,6,3,1,2,41359,4
+Slovakia,SVK,5386995,,High income,#6467F1,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Liechtenstein,LIE,34598,,High income,#6467F1,3,University Of Liechtenstein,1961,1,2,3,1,1240,2
+Libyan Arab Jamahiriya,LBY,5918217,,Upper middle income,#6AF688,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Madagascar,MDG,18642586,,Low income,#E01429,49,University Of Antananarivo,1955,42,42,13,24,104445,25
+Martinique,MTQ,395896,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Mongolia,MNG,2580704,,Lower middle income,#FFF300,52,Mongolian State Music And Dance Conservatory,1937,52,44,25,13,164457,39
+Montserrat,MSR,5628,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+The former Yugoslav Republic of Macedonia,MKD,2033655,,Upper middle income,#6AF688,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Mali,MLI,1161109,,Low income,#E01429,8,National School Of Engineering,1950,5,3,1,6,42733,2
+Morocco,MAR,30494991,,Lower middle income,#FFF300,157,Quarraouyine Fez University,859,76,97,28,44,1079503,113
+Mauritius,MUS,1241173,,High income,#6467F1,7,University Of Mauritius,1965,6,6,3,7,26205,NULL
+Mauritania,MRT,2963105,,Lower middle income,#FFF300,4,"National School Of Administration, Journalism And Magistature",1966,3,4,1,3,30945,1
+Malta,MLT,402617,,High income,#6467F1,3,University Of Malta,1592,2,2,2,2,12906,1
+Oman,OMN,2507042,,High income,#6467F1,53,Salalah College Of Technology,1979,51,13,2,29,218746,24
+Maldives,MDV,295297,,Upper middle income,#6AF688,7,The Maldives National University,1973,7,7,1,2,18558,5
+Mexico,MEX,104266392,,Upper middle income,#6AF688,776,Michoacan University Of Saint Nicholas Of Hidalgo,1543,600,NULL,155,283,6250189,493
+Malaysia,MYS,25652985,,Upper middle income,#6AF688,82,University Of Technology Malaysia,1904,76,81,70,21,914797,61
+Mozambique,MOZ,20532675,,Low income,#E01429,40,Eduardo Mondlane University,1962,39,NULL,5,15,104986,25
+Malawi,MWI,13226091,,Low income,#E01429,19,University Of Livingstonia,1875,19,11,10,7,52629,12
+New Caledonia,NCL,234185,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Niue,NIU,1632,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Niger,NER,1326419,,Low income,#E01429,11,African School Of Meteorology And Civil Aviation,1963,6,8,2,9,20451,2
+Aruba,ABW,102897,,High income,#6467F1,2,University Of Aruba,1988,2,2,NULL,2,1237,NULL
+Anguilla,AIA,12256,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Belgium,BEL,10398049,,High income,#6467F1,105,Catholic University Of Leuven,1425,18,55,11,78,365757,27
+Hong Kong,HKG,7057418,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Northern Mariana Islands,MNP,80258,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Faroe Islands,FRO,48205,,High income,#6467F1,1,University Of The Faroe Islands,1965,1,1,1,1,657,NULL
+Andorra,AND,73483,,High income,#6467F1,2,University Of Andorra,1988,NULL,NULL,2,1,2618,1
+Gibraltar,GIB,291,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Isle of Man,IMN,78357,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Luxembourg,LUX,456613,,High income,#6467F1,1,University Of Luxembourg,1848,1,1,1,1,6487,NULL
+Macau,MAC,47309,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Monaco,MCO,325,,High income,#6467F1,2,International University Of Monaco,1986,1,1,1,1,1837,1
+Palestine,PSE,3762005,,Lower middle income,#FFF300,29,An-Najah National University,1918,29,14,4,15,254264,14
+Montenegro,MNE,607969,,Upper middle income,#6AF688,8,University Of Montenegro,1974,8,6,2,1,31934,7
+Mayotte,MYT,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+?�land Islands,ALA,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Norfolk Island,NFK,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Cocos (Keeling) Islands,CCK,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Antarctica,ATA,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Bouvet Island,BVT,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+French Southern and Antarctic Lands,ATF,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Heard Island and McDonald Islands,HMD,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+British Indian Ocean Territory,IOT,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Christmas Island,CXR,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+United States Minor Outlying Islands,UMI,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Vanuatu,VUT,215366,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Nigeria,NGA,141356083,,Lower middle income,#FFF300,128,Yaba College Of Technology,1947,114,80,59,84,1722291,44
+Netherlands,NLD,1632769,,High income,#6467F1,78,Leiden University,1575,60,62,20,40,882244,38
+Norway,NOR,4638836,,High income,#6467F1,53,University Of Oslo,1811,29,32,23,43,181549,10
+Nepal,NPL,27093656,,Lower middle income,#FFF300,11,Tribhuvan University,1959,11,11,7,11,636568,NULL
+Nauru,NRU,10111,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Suriname,SUR,452468,,Upper middle income,#6AF688,2,Anton De Kom University Of Suriname,1968,2,2,1,2,5743,NULL
+Nicaragua,NIC,5462539,,Lower middle income,#FFF300,52,National Autonomous University Of Nicaragua-Leon,1812,48,NULL,26,8,258554,44
+New Zealand,NZL,4097112,,High income,#6467F1,31,University Of Otago,1869,26,24,12,23,345427,8
+Paraguay,PRY,5904342,,Upper middle income,#6AF688,66,National University Of Asunci�?��?�N,1889,61,NULL,34,10,437681,56
+Peru,PER,27274266,,Upper middle income,#6AF688,147,Faculty Of Pontifical And Civil Theology Of Lima,1551,NULL,NULL,54,56,1462723,91
+Pakistan,PAK,158080591,,Lower middle income,#FFF300,128,King Edward Medical University,1860,121,117,101,74,1299976,54
+Poland,POL,38195558,,High income,#6467F1,368,Collegium Medicum Jagiellonian University (Jagiellonian University Medical College),1364,342,295,110,150,1991747,218
+Panama,PAN,3231502,,High income,#6467F1,26,University Of Panama.,1935,25,NULL,10,9,327927,17
+Portugal,PRT,10528226,,High income,#6467F1,95,Lisbon University,1288,NULL,89,31,40,440501,55
+Papua New Guinea,PNG,6069715,,Lower middle income,#FFF300,6,Papua New Guinea University Of Technology,1965,6,5,3,4,25097,2
+Guinea-Bissau,GNB,1596929,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Qatar,QAT,796186,,High income,#6467F1,4,Qatar University,1973,3,3,2,4,8119,NULL
+Reunion,REU,785159,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Romania,ROU,21627557,,High income,#6467F1,93,University Of Bucharest,1694,NULL,74,51,65,690615,28
+Republic of Moldova,MDA,3876661,,Lower middle income,#FFF300,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Philippines,PHL,84566163,,Lower middle income,#FFF300,945,University Of San Carlos,1595,865,280,157,146,8511600,799
+Puerto Rico,PRI,3946779,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Russia,RUS,143953092,,Upper middle income,#6AF688,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Rwanda,RWA,9233793,,Low income,#E01429,19,National University Of Rwanda (Rwandan University) (Rwanda University),1963,11,7,1,8,59552,11
+Saudi Arabia,SAU,2361236,,High income,#6467F1,72,Umm Al-Qura University,1949,69,45,16,30,1346926,42
+Saint Kitts and Nevis,KNA,49138,,High income,#6467F1,1,Clarence Fitzroy Bryant College,1988,NULL,NULL,NULL,1,82,NULL
+Seychelles,SYC,85532,,High income,#6467F1,1,University Of Seychelles,2009,1,1,NULL,1,99,NULL
+South Africa,ZAF,47938663,,Upper middle income,#6AF688,61,University Of Cape Town,1829,27,34,27,41,1233591,20
+Lesotho,LSO,1980831,,Lower middle income,#FFF300,2,National University Of Lesotho,1945,1,1,1,1,11000,1
+Botswana,BWA,1835938,,Upper middle income,#6AF688,13,University Of Botswana,1963,13,5,3,3,37956,10
+Senegal,SEN,1177034,,Lower middle income,#FFF300,68,Sheikh Anta Diop University Of Dakar,1918,57,63,8,14,165933,54
+Slovenia,SVN,1999425,,High income,#6467F1,42,University Of Ljubljana,1595,NULL,42,26,4,110781,38
+Sierra Leone,SLE,5586403,,Low income,#E01429,4,Fourah Bay College,1827,3,3,2,3,1466,1
+Singapore,SGP,4327468,,High income,#6467F1,11,National University Of Singapore,1905,7,7,4,8,116556,3
+Somalia,SOM,8196395,,Low income,#E01429,40,Somali National University,1954,38,11,NULL,4,122291,36
+Spain,ESP,43397491,,High income,#6467F1,138,Pontifical University Of Salamanca,1134,NULL,NULL,74,92,1989304,46
+Saint Lucia,LCA,16124,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Sudan,SDN,36899747,,Low income,#E01429,78,Ahfad University For Women,1907,75,43,34,31,591379,47
+Sweden,SWE,9038049,,High income,#6467F1,62,Uppsala University,1477,37,38,38,49,452325,13
+Syrian Arab Republic,SYR,18893881,,Low income,#E01429,20,University Of Damascus,1903,18,7,6,9,693213,11
+Switzerland,CHE,7424389,,High income,#6467F1,34,University Of Basel,1460,30,32,14,30,285452,4
+Trinidad and Tobago,TTO,1323722,,High income,#6467F1,6,Imperial College Of Tropical Agriculture,1921,4,4,3,2,32843,4
+Thailand,THA,63002911,,Upper middle income,#6AF688,145,Phranakhon Rajabhat University,1887,139,135,96,79,2257608,66
+Tajikistan,TJK,6550213,,Low income,#E01429,20,Tajik State Pedagogical University Named After S. Ayni,1931,15,14,8,19,112642,1
+Tokelau,TKL,1401,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Tonga,TON,99361,,Upper middle income,#6AF688,1,University Of The South Pacific Tonga Centre,1971,1,NULL,NULL,1,96,NULL
+Togo,TGO,6238572,,Low income,#E01429,19,National School Of Administration,1958,18,18,2,4,65092,15
+Sao Tome and Principe,STP,152622,,Lower middle income,#FFF300,1,University Of S�?��?�O Tom�?��?� And Pr�?��?�Ncipe,1996,1,NULL,NULL,1,126,NULL
+Tunisia,TUN,10104685,,Lower middle income,#FFF300,42,Institute Of Advanced Studies In Tunis,1945,36,NULL,9,15,427387,27
+Turkey,TUR,72969723,,Upper middle income,#6AF688,193,Istanbul University,1453,170,NULL,96,130,4675256,63
+Tuvalu,TUV,10441,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Turkmenistan,TKM,4833266,,Upper middle income,#6AF688,16,Turkmen Agricultural University Named After Niyazov,1930,15,3,2,16,47096,NULL
+United Republic of Tanzania,TZA,38477873,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Uganda,UGA,28947181,,Low income,#E01429,40,Makerere University,1922,36,34,12,9,187064,31
+United Kingdom,GBR,60244834,,High income,#6467F1,268,University Of Oxford,1096,167,177,152,259,5532729,9
+Ukraine,UKR,46917544,,Lower middle income,#FFF300,304,Lviv National University Of Veterinary Medicine And Biotechnology Named After S.Z.Gztskyy,1454,261,276,224,234,1929758,70
+United States,USA,299846449,,High income,#6467F1,1477,Harvard University,1636,774,690,397,590,11206028,887
+Burkina Faso,BFA,13933363,,Low income,#E01429,46,National School For Administration And Magistracy,1959,38,42,8,7,110517,39
+Uruguay,URY,3325727,,High income,#6467F1,16,University Of The Republic,1833,12,NULL,3,3,403567,13
+Uzbekistan,UZB,26593123,,Lower middle income,#FFF300,63,National University Of Uzbekistan,1918,61,57,20,63,448593,NULL
+Saint Vincent and the Grenadines,VCT,119137,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Venezuela,VEN,26725573,,Upper middle income,#6AF688,82,Central University Of Venezuela,1696,69,NULL,31,49,1110190,33
+British Virgin Islands,VGB,22016,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Viet Nam,VNM,85028643,,Lower middle income,#FFF300,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+United States Virgin Islands,VIR,111408,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Namibia,NAM,2019677,,Upper middle income,#6AF688,4,Namibia University Of Science And Technology,1985,4,3,3,2,110397,2
+Wallis and Futuna Islands,WLF,15079,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Samoa,WSM,183845,,Upper middle income,#6AF688,2,"University Of The South Pacific, School Of Agriculture And Food Technology",1977,2,2,1,2,2793,NULL
+Swaziland,SWZ,1124529,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Yemen,YEM,21095679,,Low income,#E01429,12,Sana'A University.,1970,12,8,NULL,7,126660,5
+Zambia,ZMB,11478317,,Lower middle income,#FFF300,30,National Institute Of Public Administration,1963,23,20,11,7,96553,23
+Zimbabwe,ZWE,13119679,,Lower middle income,#FFF300,13,University Solution,1894,13,13,8,9,125087,4
+Indonesia,IDN,226063044,,Upper middle income,#6AF688,965,College Of Social Welfare,1901,878,311,63,103,4466005,862
+Guadeloupe,GLP,438403,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Netherlands Antilles,ANT,186392,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+United Arab Emirates,ARE,4104291,,High income,#6467F1,52,United Arab Emirates University,1976,52,31,5,21,125314,31
+Timor-Leste,TLS,1067285,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Pitcairn Islands,PCN,5,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Palau,PLW,20127,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Marshall Islands,MHL,5672,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Saint Pierre and Miquelon,SPM,6346,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Saint Helena,SHN,6399,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+San Marino,SMR,30214,,High income,#6467F1,1,University Of The Republic Of San Marino,1985,1,1,1,1,462,NULL
+Turks and Caicos Islands,TCA,24459,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Western Sahara,ESH,440428,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Serbia,SRB,9863026,,Upper middle income,#6AF688,15,University Of Belgrade,1808,15,15,15,7,213991,8
+Holy See (Vatican City),VAT,783,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Svalbard,SJM,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Saint Martin,MAF,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Saint Barthelemy,BLM,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Guernsey,GGY,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Jersey,JEY,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+South Georgia South Sandwich Islands,SGS,0,,NULL,NULL,NULL,NULL,,NULL,NULL,NULL,NULL,NULL,NULL
+Taiwan,TWN,23588932,,NULL,NULL,142,Aletheia University,1882,139,121,73,47,686592,95

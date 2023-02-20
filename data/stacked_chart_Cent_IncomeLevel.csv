@@ -1,0 +1,5 @@
+IncomeLevel,Active_Private_Special,Active_Private_NotSpecial,Active_Public_Special,Active_Public_NotSpecial,DeActive_Private_Special,DeActive_Private_NotSpecial,DeActive_Public_Special,DeActive_Public_NotSpecial
+Lower middle income,580,1547,383,1489,1,7,0,1
+Low income,109,276,98,278,0,0,0,1
+Upper middle income,988,2649,579,2612,0,9,0,2
+High income,634,2289,418,2670,11,12,5,11
