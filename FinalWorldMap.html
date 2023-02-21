@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="/Css/HistogramColorCode.css">
+<link rel="stylesheet" href="/DataVisFinalProject/Css/HistogramColorCode.css">
 <!-- Load d3.js -->
 <script src="http://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -38,7 +38,7 @@
     function GetText(d)
     {
        
-        d3.csv("/data/MapWorldWithDetail.csv",(data)=>{
+        d3.csv("/DataVisFinalProject/data/MapWorldWithDetail.csv",(data)=>{
             debugger;
             var x= data.find(i=>i.code==d.id );
             var CountryFullName=d.properties.name;
@@ -113,7 +113,7 @@ var data = d3.map();
 d3.queue()
   .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
 //   .defer(d3.csv, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv",
-.defer(d3.csv, "/data/MapWorldWithDetail.csv",
+.defer(d3.csv, "/DataVisFinalProject/data/MapWorldWithDetail.csv",
   function(d) {
 
     data.set(d.code, +d.pop,d.ColorCode);
@@ -127,7 +127,7 @@ top1=topo
   var xap=data;
   // Draw the map
     }
-    d3.csv("/data/MapWorldWithDetail.csv",(data)=>{
+    d3.csv("/DataVisFinalProject/data/MapWorldWithDetail.csv",(data)=>{
         // console.log({data},{top1})
     svg.append("g")
     .selectAll("path")
@@ -152,7 +152,7 @@ svgFunction();
 
 function colorData (topo)
 {
-    d3.csv("/data/MapWorldWithDetail.csv",(data)=>{
+    d3.csv("/DataVisFinalProject/data/MapWorldWithDetail.csv",(data)=>{
         let svg1 =d3.select("svg")
     svg1.append("g")
     .selectAll("path")
