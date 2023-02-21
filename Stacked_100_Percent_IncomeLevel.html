@@ -12,7 +12,7 @@
   }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="/Css/StackedBarCss.css">
+<link rel="stylesheet" href="/DataVisFinalProject/Css/StackedBarCss.css">
 
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
@@ -113,7 +113,7 @@ var svg = d3.select("#IncomeLevelBasedStackBar")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("/data/stacked_chart_Cent_IncomeLevel.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/stacked_chart_Cent_IncomeLevel.csv", function(data) {
   // List of subgroups = header of the csv files = Regions
   var subgroups = data.columns.slice(1)
 
