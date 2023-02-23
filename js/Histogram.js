@@ -29,8 +29,8 @@ var svg = d3.select("#IncomeLevel")
         .text("Count Of Universities VS Year Graph");
 
 // get the data
-d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
-    //d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+ //d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+    d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
   // X axis: scale and draw:
   var x = d3.scaleLinear()
       .domain([1910,2023])     
@@ -205,8 +205,8 @@ var svg = d3.select("#IncomeLevel")
           .attr("font-family", "RobotoSlab")
           .text("Count Of Universities VS Year Graph");
 // get the data
-d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+//d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
   // X axis: scale and draw:
   var x = d3.scaleLinear()
       .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
@@ -280,8 +280,8 @@ var svg = d3.select("#IncomeLevel")
           .attr("font-family", "RobotoSlab")
           .text("Count Of Universities VS Year Graph");
 // get the data
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
- d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+ //d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
 
   // X axis: scale and draw:
   var x = d3.scaleLinear()
@@ -353,8 +353,8 @@ var svg = d3.select("#IncomeLevel")
           .text("Count Of Universities VS Year Graph");
 
 // get the data
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
-    d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+   // d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
 
   // X axis: scale and draw:
   var x = d3.scaleLinear()
@@ -423,8 +423,8 @@ var svg = d3.select("#IncomeLevel")
           .attr("font-family", "RobotoSlab")
           .text("Count Of Universities VS Year Graph");
 // get the data
-d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+//d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
   // X axis: scale and draw:
   var x = d3.scaleLinear()
       .domain([1910,2023])     
@@ -499,8 +499,8 @@ var svg = d3.select("#IncomeLevel")
     {
   
 // get the data
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
-  d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+ // d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
 // X axis: scale and draw:
 var x = d3.scaleLinear()
     .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
@@ -548,8 +548,8 @@ svg.append("g")
     {
     
 // get the data
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
-  d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+ // d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
 // X axis: scale and draw:
 var x = d3.scaleLinear()
     .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
@@ -594,8 +594,8 @@ svg.selectAll("rect2")
     {
     
 // get the data
-d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+//d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
 // X axis: scale and draw:
 var x = d3.scaleLinear()
     .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
@@ -641,8 +641,8 @@ svg.append("g")
 
 
 // get the data
-d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
-//d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
+//d3.csv("/data/University_Founded_Year_Histogram.csv", function(data) {
+d3.csv("/DataVisFinalProject/data/University_Founded_Year_Histogram.csv", function(data) {
 // X axis: scale and draw:
 var x = d3.scaleLinear()
     .domain([1910,2023])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
