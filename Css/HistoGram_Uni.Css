@@ -1,0 +1,26 @@
+.container{
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+   }
+  .Hidden{
+   visibility: hidden;
+   }
+   .Show{
+   visibility: visible;
+   }
+   .BarDisable{
+    opacity: 0!important;
+    /* z-index: -10; */
+   }
+   .Title_Class{
+
+    font-weight: bold;
+    padding-top: 5%;
+     font-family: RobotoSlab;
+   }
+   .PlaceMent
+   {
+    padding-left: 10%; padding-top: 7%;
+   }
