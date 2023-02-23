@@ -1,0 +1,16 @@
+.bubbles {
+    stroke-width: 1px;
+    stroke: black;
+    opacity: .8
+  }
+  .bubbles:hover {
+    stroke: black;
+  }
+  .padding_Top
+   {
+    position: fixed !important;
+    top: 80px !important;
+    right: 0;
+    height: fit-content;
+   width: 30% !important ;
+   }
