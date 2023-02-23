@@ -22,5 +22,6 @@
    }
    .PlaceMent
    {
-    padding-left: 10%; padding-top: 7%;
+    padding-left: 10%!important;
+       padding-top: 7%;
    }
