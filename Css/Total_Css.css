@@ -34,8 +34,8 @@
     border-top: none;
   }
   .Font_For_Title_And_Headings {
-    font-family: RobotoSlab;
+    font-family: RobotoSlab !important;
    }
    .Font_For_Paragraph_And_Texts {
-    font-family: FiaraSas;
+    font-family: FiaraSas !important;
    }
