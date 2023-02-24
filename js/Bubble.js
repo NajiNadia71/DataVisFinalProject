@@ -96,7 +96,7 @@ d3.csv("/DataVisFinalProject/data/Bubble_Top5HighestStudentInEachIncomeGroup_CSV
  
     tooltip
       .transition()
-      .duration(200)
+      .duration(400)
     tooltip
       .style("opacity", 1)
       .attr("class","Font_For_Title_And_Headings")
