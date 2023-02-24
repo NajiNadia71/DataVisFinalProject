@@ -13,213 +13,37 @@
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="/DataVisFinalProject/Css/StackedBarCss.css">
+<link rel="stylesheet" href="/Css/StackedBarCss.css">
 
+<link rel="stylesheet" href="/DataVisFinalProject/Css/Total_Css.css">
+<link rel="stylesheet" href="/Css/Total_Css.css">
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
+<script src="/DataVisFinalProject/js/Stacked_Region.js"> </script> 
+<script src="/js/Stacked_Region.js"> </script>
 </head>
 <body >
-  <div class="container"> 
+  <div class="container containerl" ondblclick="DBClickOnDiv()"> 
     <div class="row">
-      <div class="col-8" id="RegionBasedStackBar" ondblclick="DBClickOnDiv()" style="padding-left: 0px!important;"></div>
-      <div class="col-4"  style="padding-left: 10%; padding-top: 7%;"   id="Explains">
-        <div class="row" style="font-weight: bold;">Details about The Stacked Bar</div>
-        <div class="row" >-Active Private Specialized  &nbsp; <div class="Active_Private_Specialized"></div></div>
-        <div class="row">-Active Private Not Specialized  &nbsp;  <div class="Active_Private_NotSpecialized"></div></div>
-        <div class="row"  >-Active Public Specialized  &nbsp;  <div class="Active_Public_Specialized"></div></div>
-        <div class="row" >-Active Public Not Specialized  &nbsp; <div class="Active_Public_NotSpecialized"></div>  </div>
+      <div class="col-8  div_Eight" id="RegionBasedStackBar"  style="padding-left: 0px!important;"></div>
+      <div class="col-4 div_Four"     id="Explains">
+        <div class="row" class="row Font_For_Title_And_Headings">Details about The Stacked Bar</div>
+        <div class="row" class="row Font_For_Paragraph_And_Texts" >-Active Private Specialized  &nbsp; <div class="Active_Private_Specialized"></div></div>
+        <div class="row" class="row Font_For_Paragraph_And_Texts">-Active Private Not Specialized  &nbsp;  <div class="Active_Private_NotSpecialized"></div></div>
+        <div class="row" class="row Font_For_Paragraph_And_Texts" >-Active Public Specialized  &nbsp;  <div class="Active_Public_Specialized"></div></div>
+        <div class="row" class="row Font_For_Paragraph_And_Texts" >-Active Public Not Specialized  &nbsp; <div class="Active_Public_NotSpecialized"></div>  </div>
       
-        <div class="row" >-InActive Private Not Specialized&nbsp; <div class="InActive_Private_NotSpecialized"></div></div>
-        <div class="row" >-InActive Private  Specialized &nbsp; &nbsp;&nbsp;  <div class="InActive_Private_Specialized"></div>  </div>
-        <div class="row">-InActive Public Not Specialized &nbsp;  &nbsp;&nbsp; <div class="InActive_Public_NotSpecialized"></div> </div>
-        <div class="row" >-InActive Public  Specialized &nbsp; <div class="InActive_Public_Specialized"></div> </div>
+        <div class="row" class="row Font_For_Paragraph_And_Texts" >-InActive Private Not Specialized&nbsp; <div class="InActive_Private_NotSpecialized"></div></div>
+        <div class="row"  class="row Font_For_Paragraph_And_Texts">-InActive Private  Specialized &nbsp; &nbsp;&nbsp;  <div class="InActive_Private_Specialized"></div>  </div>
+        <div class="row" class="row Font_For_Paragraph_And_Texts">-InActive Public Not Specialized &nbsp;  &nbsp;&nbsp; <div class="InActive_Public_NotSpecialized"></div> </div>
+        <div class="row"  class="row Font_For_Paragraph_And_Texts">-InActive Public  Specialized &nbsp; <div class="InActive_Public_Specialized"></div> </div>
        
       </div>
     </div>
-     <!-- Create a div where the graph will take place -->
-
-     <div class="navbar fixed-bottom" > <p class="font-weight-bold" style="text-align: center"> Regions Of World </p> </div>
-    </div>
- 
+   
     
   </body>
 <script>
-  var ALlTheData=[];
-function onGraphClick(d)
-{
-  
- 
-var Active_Private_NotSpecial=d.data.Active_Private_NotSpecial.toFixed(2);
-var Active_Private_Special=d.data.Active_Private_Special.toFixed(2);
-var Active_Public_NotSpecial=d.data.Active_Public_NotSpecial.toFixed(2);
-var Active_Public_Special=d.data.Active_Public_Special.toFixed(2);
-
-var DeActive_Private_NotSpecial=d.data.DeActive_Private_NotSpecial.toFixed(2);
-var DeActive_Private_Special=d.data.DeActive_Private_Special.toFixed(2);
-var DeActive_Public_NotSpecial=d.data.DeActive_Public_NotSpecial.toFixed(2);
-var DeActive_Public_Special=d.data.DeActive_Public_Special.toFixed(2);
-var Region=d.data.Region;
- 
-    tooltip
-      .transition()
-      .duration(200)
-    tooltip
-      .style("opacity", 1)
-      .html("At Region Of "+ Region+" , "+Active_Private_NotSpecial  + " Percent Of Universities Are Active, Private and NotSpecial and "+
-      Active_Private_Special + " Percent Of Universities Are  Active, Private and Special and "+
-      Active_Public_NotSpecial + " Percent Of Universities Are  Active, Public and NotSpecial and "+
-      Active_Public_Special+  " Percent Of Universities Are  Active, Public and Special and "+
-
-      DeActive_Private_NotSpecial +" Percent Of Universities Are  DeActive Private and NotSpecial and "+
-      DeActive_Private_Special +" Percent Of Universities Are DeActive Private and Special and "+
-      DeActive_Public_NotSpecial +" Percent Of Universities Are  DeActive Public and NotSpecial and "+
-      DeActive_Public_Special +" Percent Of Universities Are DeActive Public and Special . "
-      )
-      .style("left", (d3.mouse(this)[0]+30) + "px")
-      .style("top", (d3.mouse(this)[1]+30) + "px")
-       
-  }
-function DBClickOnDiv()
-{
-  tooltip
-      .transition()
-      .duration(200)
-      .style("opacity", 0) 
- 
-}
-var tooltip = d3.select("#RegionBasedStackBar")
-    .append("div")
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "black")
-      .style("border-radius", "5px")
-      .style("padding", "10px")
-      .style("color", "white");
-  
-var allIds =[];
-var AllDetails=[];
-// set the dimensions and margins of the graph
-var margin = {top: 50, right: 30, bottom: 130, left: 50},
-    width = 750 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-var svg = d3.select("#RegionBasedStackBar")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
-
-// Parse the Data
-d3.csv("/DataVisFinalProject/data/stacked_chart_Cent_Region.csv", function(data) {
-  // List of subgroups = header of the csv files = Regions
-  var subgroups = data.columns.slice(1)
-
-  // List of groups = species here = value of the first column called group -> I show them on the X axis
-  var groups = d3.map(data, function(d){return(d.Region)}).keys()
-
- 
-  // Add X axis
-  var x = d3.scaleBand()
-      .domain(groups)
-      .range([0, width])
-      .padding([0.2])
-  svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).tickSizeOuter(0))
-    .selectAll("text")
-    .style("text-anchor", "end")
-    .attr("font-weight", 700)
-    .attr("transform", "rotate(-65)" );
-
-
-  // Add Y axis
-  var y = d3.scaleLinear()
-    .domain([0, 110])
-    .range([ height, 0 ]);
-  svg.append("g")
-    .call(d3.axisLeft(y));
-  // Add Y axis label:
-  svg.append("text")
-      .attr("text-anchor", "end")
-      .attr("x", -20)
-      .attr("y", -15 )
-      .text("Quantity Of University ")
-      .attr("font-weight", 700)
-      .attr("text-anchor", "start")
-
-  // color palette = one color per subgroup
-  var GetColor=function(subgroup)
-  {
-    debugger;
-    if(subgroup=='Active_Private_Special')
-    return '#FFF300';
-    if(subgroup=='Active_Private_NotSpecial')
-    return '#A70D17';
-    if(subgroup=='Active_Public_Special')
-    return '#FF5E03';
-    if(subgroup=='Active_Public_NotSpecial')
-    return '#FFFBAF';
-    if(subgroup=='DeActive_Private_Special')
-    return '#080A86';
-    if(subgroup=='DeActive_Private_NotSpecial')
-    return '#7624AC';
-    if(subgroup=='DeActive_Public_Special')
-    return '#CD028C';
-    if(subgroup=='DeActive_Public_NotSpecial')
-    return '#02FA37';
-
-  }
-  // var color = d3.scaleOrdinal()
-  //   .domain(subgroups)
-  //   .range(['#FFF300','#A70D17','#056319','#FF5E03','#080A86','#7624AC','#CD028C','#02FA37'])
-  //   console.log( 'Colors',color);
-  //   console.log('SubGroups',subgroups);
-  // Normalize the data -> sum of each group must be 100!
- 
-
-  dataNormalized = []
-  data.forEach(function(d){
-    // Compute the total
-   
-    tot = 0
-    for (i in subgroups)
-    { 
-      name=subgroups[i] ;
-       tot += +d[name] 
-      }
-    // Now normalize
-    for (i in subgroups)
-    { name=subgroups[i] ; 
-      d[name] = d[name] / tot * 100
-    }
-  
-  })
-
-  
-
-  //stack the data? --> stack per subgroup
-  var stackedData = d3.stack()
-    .keys(subgroups)
-    (data)
-    ALlTheData=stackedData;
-  // Show the bars
-  svg.append("g")
-    .selectAll("g")
-    // Enter in the stack data = loop key per key = group per group
-    .data(stackedData)
-    .enter().append("g")
-      .attr("fill", function(d) { return GetColor(d.key); })
-      .selectAll("rect")
-      // enter a second time = loop subgroup per subgroup to add all rectangles
-      .data(function(d) { return d; })
-      .enter().append("rect")
-      .on("click", onGraphClick )
-        .attr("x", function(d) { return x(d.data.Region); })
-        .attr("y", function(d) { return y(d[1]); })
-        .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-        .attr("width",x.bandwidth())
-})
+ onloadStckedRegion();
 
 </script>

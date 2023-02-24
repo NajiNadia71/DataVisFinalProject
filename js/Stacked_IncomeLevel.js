@@ -34,8 +34,8 @@ var tooltip = d3.select("#IncomeLevelBasedStackBar")
     
    
     // Parse the Data
-    d3.csv("/DataVisFinalProject/data/stacked_chart_Cent_IncomeLevel.csv", function(data) {
-   // d3.csv("/data/stacked_chart_Cent_IncomeLevel.csv", function(data) {
+   d3.csv("/DataVisFinalProject/data/stacked_chart_Cent_IncomeLevel.csv", function(data) {
+    // d3.csv("/data/stacked_chart_Cent_IncomeLevel.csv", function(data) {
      
    // List of subgroups = header of the csv files = Regions
       var subgroups = data.columns.slice(1)
