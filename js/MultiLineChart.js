@@ -47,7 +47,7 @@ svg.append("g").attr("transform", "translate(0,540)").call(d3.axisBottom(x).tick
 // Add X axis label:
 svg.append("text")
   .attr("text-anchor", "end")
-  .attr("x", width+50)
+  .attr("x", 850)
   .attr("y", height )
   .attr("class","Font_For_Title_And_Headings")
   .attr("font-family", "RobotoSlab")
