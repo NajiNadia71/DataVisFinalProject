@@ -1,4 +1,3 @@
-function LoadMultiLineGraph(){
 var tooltip = d3.select("#my_dataviz")
 .append("div")
   .style("opacity", 0)
@@ -10,6 +9,9 @@ var tooltip = d3.select("#my_dataviz")
 
 var allIds =[];
 var AllDetails=[];
+
+function LoadMultiLineGraph(){
+
 
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 15, bottom: 20, left: 55},
