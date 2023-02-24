@@ -38,3 +38,10 @@
     width: 15px;
     background-color: #CD028C;
   }
+
+  .BadCssLabel
+  {
+  font-family:RobotoSlab !important;
+  font-weight:bold !important;
+  text-align: center !important;
+  }
