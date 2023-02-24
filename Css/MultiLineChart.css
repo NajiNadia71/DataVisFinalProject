@@ -104,3 +104,17 @@
     width: 15px;
     background-color: #F061C2;
   }
+
+  .containerl{
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+   }
+   .div_Eight
+   {
+    padding-left: 22px!important;
+   }
+   .div_Four{
+    padding-left: 10%;
+   }
