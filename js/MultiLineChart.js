@@ -1,11 +1,11 @@
-var tooltip = d3.select("#my_dataviz")
-.append("div")
-  .style("opacity", 0)
-  .attr("class", "tooltip")
-  .style("background-color", "black")
-  .style("border-radius", "5px")
-  .style("padding", "10px")
-  .style("color", "white");
+// var tooltip = d3.select("#my_dataviz")
+// .append("div")
+//   .style("opacity", 0)
+//   .attr("class", "tooltip")
+//   .style("background-color", "black")
+//   .style("border-radius", "5px")
+//   .style("padding", "10px")
+//   .style("color", "white");
 
 var allIds =[];
 var AllDetails=[];
@@ -27,6 +27,7 @@ var svg = d3.select("#my_dataviz")
       "translate(" + margin.left + "," + margin.top + ")");
 //Read the data
 d3.csv("/DataVisFinalProject/data/LineGraphOldestUniversity.csv", function(data) {
+ // d3.csv("/data/LineGraphOldestUniversity.csv", function(data) {
 data.forEach(function(d) {
 
 
@@ -90,9 +91,12 @@ svg.selectAll(".line")
   .enter()
   .append("path")
     .attr("fill", "none")
+    
 .attr("stroke", function(d){ return returncolor(d.key) })
+.attr("stroke-width", function(d) { return (70); })
   .on("click", popupclick )
     .attr("stroke-width", 1.5)
+    
     .attr("id",function(d){ return returncolor(d.key) })
     .attr("d", function(d){
       return d3.line()
@@ -212,6 +216,8 @@ document.getElementById(item).style.opacity=0;
 }
 function popupclick(d)
 {
+  
+  debugger;
 var UniversityName="",Country="",Region="",FounderYesr="",StudentPopulationAt1950="",StudentPopulationAt2020="";
 var SelectedItemDetail=AllDetails.find(i=>i.ColorCode==d.key);
 UniversityName=SelectedItemDetail.eng_name;
@@ -229,11 +235,29 @@ allIds.forEach(function(item)
 
 if(item==selecteditemk){
   document.getElementById(item).style.opacity=1;
+
 }
 else{
 document.getElementById(item).style.opacity=0;
 }});
-
+var x="University Of "+ UniversityName+ ", at  "+ Region+" Region, In "+ Country +
+" Founded in "
+ +FounderYesr+". In 1950 , "+StudentPopulationAt1950 +
+ " Students Were Studying at this University and By 2020, "+
+ StudentPopulationAt2020+ " Students Start Education at this University .";
+// document.getElementById("ToolTipId").style.visibility = "visible"; 
+// var svg = d3.select("#ToolTipId")
+// .append("svg");
+var tooltip = d3.select("#my_dataviz")
+.append("div")
+  .style("opacity", 0)
+  .attr("id","myToolTipId")
+  .attr("class", "tooltip")
+  .style("background-color", "black")
+  .style("border-radius", "5px")
+  .style("padding", "10px")
+  .style("visibility","show")
+  .style("color", "white");
 tooltip
   .transition()
   .duration(200)
@@ -247,17 +271,26 @@ tooltip
   )
   .style("left", (d3.mouse(this)[0]+30) + "px")
   .style("top", (d3.mouse(this)[1]+30) + "px")
+  var t1=document.getElementById('myToolTipId');
+  t1.style.visibility = 'show';
 }
 function DBClickOnDiv()
 {
-tooltip
-  .transition()
-  .duration(200)
-  .style("opacity", 0) 
+
+  var t1=document.getElementById('myToolTipId');
+  var t2=document.getElementsByClassName('tooltip');
+  
+      t1.style.visibility = 'hidden';
+      Array.prototype.forEach.call(t2, function(el) {
+        el.style.visibility='hidden';
+      
+    });
+    
 allIds.forEach(function(item1)
 {
-debugger;
+
   document.getElementById(item1).style.opacity=1;
 })
+
 }
 
