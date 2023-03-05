@@ -102,8 +102,8 @@ d3.csv("/DataVisFinalProject/data/Bubble_Top5HighestStudentInEachIncomeGroup_CSV
       .attr("class","Font_For_Title_And_Headings")
       .attr("class", "padding_Top")
       .html("University Of :"+ d.eng_name+ ", In "+d.country+", With Income Level Of : " + d.incomegroup
-      + ", Has "+d.students5_estimated_Int +" Studens"+ " ,In Study Levels Of "
-      +d.Title_Of_StudyLevel)
+      + ", Has "+d.students5_estimated_Int +" Studens in "+d.unique_fields+" ,Course Type"+ " ,In Study Levels Of "
+      +d.Title_Of_StudyLevel )
       .duration(200)
     }
   var moveTooltip = function(d) {
