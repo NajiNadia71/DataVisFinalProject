@@ -75,3 +75,10 @@ References:
 Available upon request
 
 Note: Tailor your resume to highlight the specific experience and achievements related to database creation. Showcase your technical skills, project experience, and results-driven approach to make a strong impression on potential employers.
+Education
+• Master in Computer Engineering (Genoa University)
+Other Experiences
+• Working with React and Django on New Project (2023)
+• Participate in Shiraz-Hub startup affair (Developer of NNGO software in 
+2021)
+• Web Api (Project Name: Customer Rooms in 2019 - 2020)
